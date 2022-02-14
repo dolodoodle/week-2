@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/*style rule*/ 
+body {
+  background-color: #fae7eb;
+}
+
+#heart {
+  position: absolute;
+  width: 90px;
+  height: 80px;
+  animation: mymove 4s ;
+  margin-left: 80%;
+  
+  
+  
+ 
+}
+
+#heart::before, #heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 52px;
+  height: 80px;
+  border-radius: 50px 50px 0 0;
+  background: rgb(179, 105, 163);
+}
+
+#heart::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+#heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/*
+@keyframes heartbeat {
+  0% {
+    transform: scale( 1 );    
+  }
+  20% {
+    transform: scale( .75 ) 
+      translateX(5%) 
+      translateY(5%);
+  } 
+  40% {
+    transform: scale( 1 ) 
+      translateX(9%) 
+      translateY(10%);
+  }
+}
+
+#heart {
+  animation: heartbeat 2s;
+}
+
+.heart {
+  padding: 1rem;
+}
+*/
+
+header {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
+
+
+nav ul{
+  list-style: none;
+  color: #d1edea;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-evenly;
+}
+
+
+h1 {
+  color: #754b61;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  padding: 45px 80px;
+}
+
+h2 {
+  color: #754b61;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 36px;
+  margin: 0;
+  padding: 1rem;
+  }
+
+h4 {
+    color: #754b61;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-weight: regular;
+  }
+
+p {
+  font-family: 'Quicksand', sans-serif;
+}
+  
+  /*padding is space inside borders, width and height for squares
+  .projects{
+    background-image: url(https://unsplash.it/300/300);
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  */
+  
+  /*padding is space inside borders, width and height for squares*/
+
+
+
+
+  li h4 {
+    margin: 0;
+  }
+  
+  li p {
+    margin: .5em 0 0 0;
+    font-size: .85rem;
+  }
+
+.projects {
+  color: #754b61;
+  background-color: #ecf8f7;
+  height: 350px;
+  width: flex;
+  padding: 1rem;
+font-family: 'Quicksand', sans-serif;
+}
+
+
+.projects ol {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: align; /* only use for wrapped rows. Otherwise use align-items */
+
+}
+
+
+
+.projects li {
+      width: 175px;
+      height: 175px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border: 2px solid #f2d7e8;
+      box-shadow:3px 5px 3px hsla(0, 50%, 0%, .25);
+      background: #fae7eb;
+      padding: 20px;
+      border-radius: .25rem;
+      transition: opacity 0.35s ease;
+ }
+
+ .projects li: active {
+   background: white;
+ }
+
+   
+
+
+
+
+
+
+    .labs {
+      color: #754b61;
+      background-color: #b58ebc;
+      float: left;
+      width: 80%;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .labs li {
+      width: 170px;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: 1rem;
+      border: 2px solid #f2d7e8;
+      background: #fae7eb;
+      box-shadow:3px 5px 3px hsla(0, 50%, 0%, .25);
+      padding: 20px;
+      border-radius: .25rem;
+      
+    }
+
+    .labs ol {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      flex-wrap: nowrap;
+      justify-content: start;
+      align-content: align; /* only use for wrapped rows. Otherwise use align-items */
+  }
+
+  aside {
+    background-color: #f2d7e8;
+    display: flex;
+    padding-bottom: 8px;
+    
+  }
+
+  
+
+.projects li:hover{
+      box-shadow: 5px 10px 10px rgba(0, 0, 0, .5);
+    
+  }
+
+  .projects li:focus{
+    background-color: whitesmoke;
+  }
+
+ @keyframes li {
+    0% {
+        opacity: 0;
+        transform: translatex(-100rem);
+    }
+​
+    85% {
+        transform: translatex(1rem);
+    }
+​
+    100% {
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
+
+
+.labs li:hover{
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, .5);
+  
+}
+
+
+
+  .about {
+    background-color: #d1edea;
+    width: flex;
+    display: flex;
+  }
+
+
+
+  /*
+    .labs li {
+      border: 5px solid purple;
+      background-color: #DB7093;
+      margin: 10px;
+      padding:10px;
+      height:12rem;
+      width:12rem;
+      display: inline-block;
+    }
+    */ 
